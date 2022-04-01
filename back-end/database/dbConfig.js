@@ -8,14 +8,14 @@ const cn = DATABASE_URL
       connectionString: DATABASE_URL,
       max: 30,
       ssl: {
-        rejectUnauthorized: false,
-      },
+        rejectUnauthorized: false
+      }
     }
   : {
       host: PG_HOST,
       port: PG_PORT,
       database: PG_DATABASE,
-      user: PG_USER,
+      user: PG_USER
       // password: PG_PASSWORD,
     };
 
