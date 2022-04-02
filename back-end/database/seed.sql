@@ -2,9 +2,9 @@
 INSERT INTO
     meetingrooms (room_name, room_capacity, room_floor)
 VALUES
-    ('Board Room 1', 6, 15),
-    ('Board Room 2', 6, 15),
-    ('Executive Board Room', 20, 23);
+    ('Meeting Room 1', 6, 22),
+    ('Boardroom 2', 6, 12),
+    ('Hub', 30, 23);
 
 
 INSERT INTO bookings (room_id, meeting_name, attendees, start_date, end_date)
