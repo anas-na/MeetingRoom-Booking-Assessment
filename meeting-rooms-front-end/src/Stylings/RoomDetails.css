@@ -1,0 +1,14 @@
+.singleRoomInfo {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px black solid;
+    /* margin: 0; */
+    /* margin-left: 10px; */
+}
+
+.singleRoomContainer {
+    display: inline-block;
+    width: 60%;
+}
