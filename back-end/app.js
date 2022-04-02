@@ -1,6 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const rooms = require("./controllers/meetingRoomsController");
+const bookings = require('./controllers/bookingsController');
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/rooms", rooms);
+app.use("/bookings", bookings);
 
 app.get("*", (req, res) => {
   res.status(404).send("Page Not Found!!!");
