@@ -1,0 +1,18 @@
+.navBar {
+    width: 60%;
+    display: inline-block;
+    align-content: center;
+    align-self: center;
+    /* text-align: left; */
+    border: 2px black solid;
+    margin: 0 auto;
+    margin-bottom: 5px;    
+}
+
+.navInfo {
+    
+}
+
+.link {
+    border-right: 1px white solid;
+}

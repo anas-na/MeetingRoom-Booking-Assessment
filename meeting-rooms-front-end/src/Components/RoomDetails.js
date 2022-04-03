@@ -7,8 +7,9 @@ import { BsPeople } from "react-icons/bs";
 import "../Stylings/RoomDetails.css";
 
 const API = apiURL();
-
+const moment = require('moment');
 const RoomDetails = () => {
+  
   const [room, setRoom] = useState({});
   const [roomBookings, setRoomBookings] = useState([]);
   let { id } = useParams();
@@ -24,21 +25,14 @@ const RoomDetails = () => {
   // console.log(room)
   
   const getBookings = async () => {
-      let roomBookings = []
     try {
-      const bookingsRes = await axios.get(`${API}/bookings`);
-      const res = bookingsRes.data;
-      console.log(res);
-      res.map((booking) => {
-        let bookingRoomId = booking.room_id
-        if (bookingRoomId == id) {
-         roomBookings.push(booking)
-        }
-      });
+      const bookingsRes = await axios.get(`${API}/rooms/${id}/bookings`);
+      console.log(bookingsRes)
+      setRoomBookings(bookingsRes.data)
     } catch (error) {
       console.log(error);
     }
-    setRoomBookings(roomBookings)
+    // setRoomBookings(roomBookings)
 };
 
 console.log(roomBookings)
@@ -48,9 +42,6 @@ console.log(roomBookings)
     getBookings()
 }, [id]);
 
-
-
-  // console.log(roomBookings)
   return (
     <div className='singleRoomContainer'>
       <div className='singleRoomInfo'>
@@ -67,9 +58,15 @@ console.log(roomBookings)
 
       <div className='roomBookings'>
         {roomBookings.map((booking) => {
+          let startTime = booking.start_date
+          let endTime = booking.start_date
+          console.log(`start:`, startTime)
+          // console.log(`end:`, endTime)
             return (
                 <div>
                     <p>{booking.meeting_name}</p>
+                    <p>{moment(booking.start_date).format("LL")}</p>
+                    <p>{moment(booking.start_date).format("LL")}</p>
                 </div>
             )
           console.log(booking);
