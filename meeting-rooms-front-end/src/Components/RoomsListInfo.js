@@ -1,6 +1,8 @@
 import {BiBuilding} from 'react-icons/bi'
 import {BsPeople} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+
+
 const RoomsListInfo = ({room}) => {
     console.log(room)
     

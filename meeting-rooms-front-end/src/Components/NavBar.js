@@ -9,7 +9,7 @@ const NavBar = () => {
     <Nav className="me-auto navInfo">
       <Nav.Link className='link' href="/">Rooms</Nav.Link>
       <Nav.Link className='link' href="/bookings">Bookings</Nav.Link>
-      <Nav.Link className='link' href="/newRoom">New Room</Nav.Link>
+      <Nav.Link className='link' href="/newroom">New Room</Nav.Link>
     </Nav>
     </Container>
   </Navbar>

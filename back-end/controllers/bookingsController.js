@@ -2,10 +2,19 @@ const express = require("express");
 
 const bookings = express.Router();
 
-const { getAllBookings, getRoomBookings } = require('../queries/bookings.js')
+const { getAllBookings, getRoomBookings, getBooking, deleteBooking } = require('../queries/bookings.js')
 
 bookings.get("/", async (req, res) => {
     res.json(await getAllBookings());
   });
 
+bookings.get('/:id', async (req, res) => {
+  const { id } = req.params
+  res.json(await getBooking(id));
+})
+
+bookings.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  res.json(await deleteBooking(id))
+});
 module.exports = bookings;

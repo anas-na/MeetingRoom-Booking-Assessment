@@ -4,8 +4,8 @@
 
 \c meetingroom_bookings;
 
-DROP TABLE IF EXISTS meetingrooms;
 DROP TABLE IF EXISTS bookings;
+DROP TABLE IF EXISTS meetingrooms;
 
 CREATE TABLE meetingrooms (
     id SERIAL PRIMARY KEY,
@@ -15,12 +15,11 @@ CREATE TABLE meetingrooms (
 );
 
 CREATE TABLE bookings (
-    id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY UNIQUE,
     meetingroom_id INT REFERENCES meetingrooms(id),
     meeting_name TEXT NOT NULL,
     attendees INT NOT NULL,
-    start_date timestamp NOT NULL,
-    end_date timestamp NOT NULL
-)
+    start_date timestamptz NOT NULL,
+    end_date timestamptz NOT NULL
+);
 
---  room_id INT NOT NULL REFERENCES meetingrooms(id),

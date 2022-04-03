@@ -64,7 +64,7 @@ console.log(roomBookings)
           // console.log(`end:`, endTime)
             return (
                 <div>
-                    <p>{booking.meeting_name}</p>
+                         <p>{booking.meeting_name}</p>
                     <p>{moment(booking.start_date).format("LL")}</p>
                     <p>{moment(booking.start_date).format("LL")}</p>
                 </div>
