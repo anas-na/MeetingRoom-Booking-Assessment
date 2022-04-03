@@ -1,0 +1,16 @@
+.newRoomContainer {
+    font-size: x-large;
+
+}
+
+.roomInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+.newRoom { 
+    border-bottom: 1px black solid;
+    display: inline-block;
+}

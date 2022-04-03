@@ -1,0 +1,38 @@
+.bookingContainer {
+    display: inline-block;
+    align-content: center;
+    align-self: center;
+    /* text-align: left; */
+    border: 2px black solid;
+    border-radius: 10px;
+    width: 60%;
+    /* height: 5em; */
+    margin: 0 auto;
+    margin-bottom: 5px;
+    /* font-size: 0 */
+}
+
+.bookingName {
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-top: 3px;
+}
+
+ul {
+    margin-top: 0px;
+    padding-left: 9px;
+}
+
+ul li {
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.detailLink {
+    color: black;
+}
+
+.detailLink:hover {
+    color: black;
+}
