@@ -2,6 +2,9 @@ const express = require("express");
 
 const meetingRooms = express.Router();
 
+// const bookings = express.Router();
+
+const { getRoomBookings } = require('../queries/bookings.js')
 const { getAllRooms, getRoom, createRoom, updateRoom, deleteRoom } = require("../queries/meetingRooms.js");
 
 meetingRooms.get("/", async (req, res) => {
@@ -27,5 +30,10 @@ meetingRooms.delete("/:id", async (req, res) => {
   const { id } = req.params;
   res.json(await deleteRoom(id))
 });
+
+meetingRooms.get('/:id/bookings', async (req, res) => {
+  const { id } = req.params;
+  res.json(await getRoomBookings(id));
+})
 
 module.exports = meetingRooms;
