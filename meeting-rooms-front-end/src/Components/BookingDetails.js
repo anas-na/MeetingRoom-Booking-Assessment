@@ -19,7 +19,7 @@ const BookingDetails = () => {
     const fetchBooking = async () => {
         try {
           const res = await axios.get(`${API}/bookings/${id}`);
-          console.log(res)
+          console.log(res.data)
           setBooking(res.data);
         } catch (error) {
           console.log(error);
@@ -37,7 +37,6 @@ const BookingDetails = () => {
           cancelBooking();
           history.push('/bookings')
       }
-    console.log(booking)
 
     useEffect(() => {
         fetchBooking();
@@ -48,12 +47,12 @@ const BookingDetails = () => {
             <br />
             <br />
             <div>
-            <p><MdTimer />{moment(booking.start_date).format("LLL")}</p>
-            <p><MdTimer />{moment(booking.end_date).format("LLL")}</p>
+            <p className="bookingTime"><MdTimer />{moment(booking.start_date).format("LLL")}</p>
+            <p className="bookingTime"><MdTimer />{moment(booking.end_date).format("LLL")}</p>
             <p><BiBuilding />  Floor: {booking.room_floor}</p>
             </div>
             <Button onClick={handleCancelation} variant="contained" color="neutral" type="submit" className='submitButton'>
-          Submit
+          Cancel
         </Button>
         </div>
     )

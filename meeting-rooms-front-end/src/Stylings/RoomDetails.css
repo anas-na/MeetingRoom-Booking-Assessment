@@ -12,3 +12,23 @@
     display: inline-block;
     width: 60%;
 }
+
+.roomBooking{
+    display: inline-block;
+    text-align: left;
+    align-content: center;
+    align-self: center;
+    border: 2px black solid;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.roomName {
+    margin-top: 3px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+

@@ -9,7 +9,6 @@ import NewMeetingRoom from './pages/NewMeetingRoom'
 import RoomDetails from "./Components/RoomDetails";
 import ShowBookings from './pages/ShowBookings'
 import ShowSingleBooking from "./pages/ShowSingleBooking";
-
 function App() {
   return (
     <div className='App'>

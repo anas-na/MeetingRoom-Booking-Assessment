@@ -2,3 +2,16 @@
     display: flex;
     flex-direction: column;
 }
+
+button {
+    align-self: center;
+    width: 30%;
+}
+
+.bookingTime {
+    padding-left: 9px;
+}
+
+.roomName {
+    padding-left: 9px;
+}

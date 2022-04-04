@@ -7,7 +7,7 @@ import BookingsListInfo from './BookingsListInfo'
 const API = apiURL();
 
 const BookingsList = (params) => {
-    const [bookings, setBookings ] = useState([])
+                    const [bookings, setBookings ] = useState([])
 
     const fetchBookings = async () => {
         try {

@@ -6,7 +6,7 @@ const ShowBookings = () => {
     return (
         
             <div>
-                <h1>index</h1>
+                <h1>All Bookings</h1>
                 <BookingsList />
             </div>
         
