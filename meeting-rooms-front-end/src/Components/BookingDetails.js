@@ -19,7 +19,6 @@ const BookingDetails = () => {
     const fetchBooking = async () => {
         try {
           const res = await axios.get(`${API}/bookings/${id}`);
-          console.log(res.data)
           setBooking(res.data);
         } catch (error) {
           console.log(error);

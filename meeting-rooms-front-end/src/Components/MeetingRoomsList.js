@@ -11,7 +11,6 @@ const MeetingRoomsList = () => {
     const fetchRooms = async () => {
         try {
             const res = await axios.get(`${API}/rooms`)
-            console.log(res.data)
             setRooms(res.data)
         } catch (error) {
             console.log(error)

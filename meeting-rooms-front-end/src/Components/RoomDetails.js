@@ -81,7 +81,6 @@ const handleEndDate = (newValue) => {
 const handleInputChange = (e) => {
   setNewBooking({ ...newBooking, [e.target.id]: e.target.value });
 }
-console.log(newBooking)
 const addBooking = async (newBooking) => {
   try {
     await axios.post(`${API}/bookings`, newBooking)
@@ -97,7 +96,6 @@ const handleSubmit = (e) => {
   addBooking(newBooking);
 };
 
-console.log(roomBookings)
 
   useEffect(() => {
     fetchRoom();

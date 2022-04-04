@@ -5,7 +5,6 @@ const moment = require('moment');
 
 
 const BookingsListInfo = ({booking}) => {
-    console.log(booking)
     return (
         <Link to = {`/bookings/${booking.id}`} className='detailLink'>
              <div className='bookingContainer'>
