@@ -7,9 +7,9 @@ const NavBar = () => {
     <Navbar bg="dark" variant="dark" className= 'navBar '>
     <Container>
     <Nav className="me-auto navInfo">
-      <Nav.Link className='link' to="/">Rooms</Nav.Link>
-      <Nav.Link className='link' to="/bookings">Bookings</Nav.Link>
-      <Nav.Link className='link' to="/newroom">New Room</Nav.Link>
+      <Nav.Link className='link' href="/">Rooms</Nav.Link>
+      <Nav.Link className='link' href="/bookings">Bookings</Nav.Link>
+      <Nav.Link className='link' href="/newroom">New Room</Nav.Link>
     </Nav>
     </Container>
   </Navbar>
