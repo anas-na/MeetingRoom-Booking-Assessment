@@ -1,9 +1,3 @@
--- DROP DATABASE IF EXISTS meetingroom_bookings;
-
--- CREATE DATABASE meetingroom_bookings;
-
-\c meetingroom_bookings;
-
 DROP TABLE IF EXISTS bookings;
 DROP TABLE IF EXISTS meetingrooms;
 

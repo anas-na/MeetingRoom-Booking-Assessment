@@ -1,4 +1,3 @@
-\c meetingroom_bookings
 INSERT INTO
     meetingrooms (room_name, room_capacity, room_floor)
 VALUES
