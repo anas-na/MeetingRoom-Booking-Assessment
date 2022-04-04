@@ -1,7 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const rooms = require("./controllers/meetingRoomsController");
-const bookings = require('./controllers/bookingsController');
+const bookings = require("./controllers/bookingsController");
 
 const app = express();
 

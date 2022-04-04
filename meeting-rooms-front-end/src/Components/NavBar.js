@@ -1,4 +1,5 @@
 import { Navbar, Container, Nav  } from 'react-bootstrap'
+//Stylings
 import '../Stylings/NavBar.css'
 
 const NavBar = () => {
