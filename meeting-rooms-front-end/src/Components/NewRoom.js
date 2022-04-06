@@ -55,6 +55,7 @@ const NewRoom = () => {
             type="text"
             value={meetingRoom.room_name}
             onChange={handleInputChange}
+            required
           />
 
           <TextField
@@ -65,6 +66,7 @@ const NewRoom = () => {
             type="number"
             value={meetingRoom.room_floor}
             onChange={handleInputChange}
+            required
           />
 
           <TextField
@@ -76,6 +78,7 @@ const NewRoom = () => {
             value={meetingRoom.room_capacity}
             onChange={handleInputChange}
             className="roomCapacity"
+            required
           />
         </Grid>
         <Button

@@ -29,9 +29,9 @@ const RoomDetails = () => {
   const [endTimeValue, setEndTimeValue] = useState();
   const [newBooking, setNewBooking] = useState({
     meeting_name: "",
-    attendees: "",
-    start_date: Date.now(),
-    end_date: Date.now(),
+    attendees: 0,
+    start_date: null,
+    end_date: null,
     meetingroom_id: Number(id)
   });
 
@@ -69,13 +69,18 @@ const RoomDetails = () => {
     setNewBooking({ ...newBooking, [e.target.id]: e.target.value });
   };
   const addBooking = async newBooking => {
-    try {
-      await axios.post(`${API}/bookings`, newBooking);
-      window.alert(`Booking Successful`);
-      history.push("/bookings");
-    } catch (error) {
-      window.alert(`Error`);
-      console.log(error);
+    console.log(newBooking.start_date) 
+    if (newBooking.start_date === null || newBooking.end_date === null) {
+      window.alert(`please choose the start and end time`)
+    } else {
+      try {
+        await axios.post(`${API}/bookings`, newBooking);
+        window.alert(`Booking Successful`);
+        history.push("/bookings");
+      } catch (error) {
+        window.alert(`Error`);
+        console.log(error);
+      }
     }
   };
 
@@ -122,6 +127,7 @@ const RoomDetails = () => {
               type="text"
               value={newBooking.meeting_name}
               onChange={handleInputChange}
+              required
             />
 
             <TextField
@@ -130,7 +136,7 @@ const RoomDetails = () => {
               name="attendees"
               label="attendees:"
               type="number"
-              value={newBooking.attendees}
+              // value={newBooking.attendees}
               onChange={handleInputChange}
             />
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -141,6 +147,7 @@ const RoomDetails = () => {
                 name="start_date"
                 value={startTimeValue}
                 onChange={handleStartDate}
+                required
               />
               <DateTimePicker
                 type="TIMESTAMP WITHOUT TIME ZONE"
@@ -149,6 +156,7 @@ const RoomDetails = () => {
                 name="end_date"
                 value={endTimeValue}
                 onChange={handleEndDate}
+                required
               />
             </MuiPickersUtilsProvider>
           </Grid>

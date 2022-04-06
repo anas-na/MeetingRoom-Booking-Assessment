@@ -11,7 +11,7 @@ CREATE TABLE meetingrooms (
 CREATE TABLE bookings (
     id SERIAL PRIMARY KEY UNIQUE,
     meeting_name TEXT NOT NULL,
-    attendees INT NOT NULL,
+    attendees INT,
     start_date timestamp NOT NULL,
     end_date timestamp NOT NULL,
     meetingroom_id INT REFERENCES meetingrooms(id)
