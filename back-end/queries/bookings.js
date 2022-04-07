@@ -11,7 +11,7 @@ const getAllBookings = async () => {
 
   const getRoomBookings = async (meetingroom_num) => {
     try {
-      const allRoomBookings = await db.any("SELECT * FROM bookings WHERE meetingroom_id = $1 AND start_date >= NOW()", meetingroom_num);
+      const allRoomBookings = await db.any("SELECT * FROM bookings WHERE meetingroom_id = $1 AND end_date >= NOW()", meetingroom_num);
       console.log(allRoomBookings);
       return allRoomBookings;
     } catch (error) {
